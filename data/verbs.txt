@@ -1,0 +1,189 @@
+arise|arose|arisen|виникати
+awake|awoke|awoken|прокидатися
+be|was/were|been|бути
+bear|bore|borne|нести; народжувати
+beat|beat|beaten|бити
+become|became|become|ставати
+begin|began|begun|починати
+bend|bent|bent|гнути
+bet|bet|bet|битися об заклад
+bid|bid|bid|пропонувати ціну
+bind|bound|bound|зв'язувати
+bite|bit|bitten|кусати
+bleed|bled|bled|стікати кров'ю
+blow|blew|blown|дути
+break|broke|broken|ламати
+breed|bred|bred|розводити
+bring|brought|brought|приносити
+broadcast|broadcast|broadcast|транслювати
+build|built|built|будувати
+burn|burnt/burned|burnt/burned|палити
+burst|burst|burst|лопатися
+buy|bought|bought|купувати
+cast|cast|cast|кидати; відливати
+catch|caught|caught|ловити
+choose|chose|chosen|вибирати
+cling|clung|clung|чіплятися
+come|came|come|приходити
+cost|cost|cost|коштувати
+creep|crept|crept|повзти
+cut|cut|cut|різати
+deal|dealt|dealt|мати справу
+dig|dug|dug|копати
+dive|dived/dove|dived|пірнати
+do|did|done|робити
+draw|drew|drawn|малювати
+dream|dreamt/dreamed|dreamt/dreamed|мріяти
+drink|drank|drunk|пити
+drive|drove|driven|водити (авто)
+dwell|dwelt|dwelt|мешкати
+eat|ate|eaten|їсти
+fall|fell|fallen|падати
+feed|fed|fed|годувати
+feel|felt|felt|відчувати
+fight|fought|fought|боротися
+find|found|found|знаходити
+fit|fit|fit|підходити за розміром
+flee|fled|fled|тікати
+fling|flung|flung|жбурляти
+fly|flew|flown|літати
+forbid|forbade|forbidden|забороняти
+forecast|forecast|forecast|прогнозувати
+foresee|foresaw|foreseen|передбачати
+foretell|foretold|foretold|передрікати
+forget|forgot|forgotten|забувати
+forgive|forgave|forgiven|пробачати
+forgo|forwent|forgone|відмовлятися
+freeze|froze|frozen|замерзати
+get|got|got/gotten|отримувати
+give|gave|given|давати
+go|went|gone|йти
+grind|ground|ground|молоти
+grow|grew|grown|рости
+hang|hung|hung|висіти
+have|had|had|мати
+hear|heard|heard|чути
+hide|hid|hidden|ховати
+hit|hit|hit|вдаряти
+hold|held|held|тримати
+hurt|hurt|hurt|завдавати болю
+keep|kept|kept|зберігати
+kneel|knelt|knelt|ставати на коліна
+know|knew|known|знати
+lay|laid|laid|класти
+lead|led|led|вести
+lean|leant/leaned|leant/leaned|спиратися
+leap|leapt/leaped|leapt/leaped|стрибати
+learn|learnt/learned|learnt/learned|вчити
+leave|left|left|залишати
+lend|lent|lent|позичати (комусь)
+let|let|let|дозволяти
+lie|lay|lain|лежати
+light|lit|lit|запалювати
+lose|lost|lost|губити
+make|made|made|робити
+mean|meant|meant|означати
+meet|met|met|зустрічати
+mislead|misled|misled|вводити в оману
+mistake|mistook|mistaken|помилятися
+misunderstand|misunderstood|misunderstood|неправильно розуміти
+mow|mowed|mown/mowed|косити
+outdo|outdid|outdone|перевершувати
+overcome|overcame|overcome|долати
+overdo|overdid|overdone|переборщувати
+overhear|overheard|overheard|підслухати
+override|overrode|overridden|скасовувати
+oversleep|overslept|overslept|проспати
+overtake|overtook|overtaken|обганяти
+partake|partook|partaken|брати участь
+pay|paid|paid|платити
+prove|proved|proven/proved|доводити
+put|put|put|класти
+quit|quit|quit|кидати
+read|read|read|читати
+rebuild|rebuilt|rebuilt|перебудовувати
+redo|redid|redone|переробляти
+repay|repaid|repaid|повертати борг
+retell|retold|retold|переказувати
+rewrite|rewrote|rewritten|переписувати
+rid|rid|rid|позбавляти
+ride|rode|ridden|їздити верхи
+ring|rang|rung|дзвонити
+rise|rose|risen|підніматися
+run|ran|run|бігти
+saw|sawed|sawn/sawed|пиляти
+say|said|said|казати
+see|saw|seen|бачити
+seek|sought|sought|шукати
+sell|sold|sold|продавати
+send|sent|sent|надсилати
+set|set|set|встановлювати
+sew|sewed|sewn/sewed|шити
+shake|shook|shaken|трусити
+shear|sheared|shorn|стригти
+shed|shed|shed|скидати; проливати
+shine|shone|shone|сяяти
+shoot|shot|shot|стріляти
+show|showed|shown|показувати
+shrink|shrank|shrunk|зменшуватися
+shut|shut|shut|зачиняти
+sing|sang|sung|співати
+sink|sank|sunk|тонути
+sit|sat|sat|сидіти
+slay|slew|slain|вбивати
+sleep|slept|slept|спати
+slide|slid|slid|ковзати
+slit|slit|slit|розрізати
+smell|smelt/smelled|smelt/smelled|пахнути
+sow|sowed|sown/sowed|сіяти
+speak|spoke|spoken|говорити
+speed|sped|sped|поспішати
+spell|spelt/spelled|spelt/spelled|вимовляти по буквах
+spend|spent|spent|витрачати
+spill|spilt/spilled|spilt/spilled|розливати
+spin|spun|spun|прясти; крутити
+spit|spat|spat|плювати
+split|split|split|розколювати
+spoil|spoilt/spoiled|spoilt/spoiled|псувати
+spread|spread|spread|поширювати
+spring|sprang|sprung|стрибати; виникати
+stand|stood|stood|стояти
+steal|stole|stolen|красти
+stick|stuck|stuck|приклеювати
+sting|stung|stung|жалити
+stink|stank|stunk|смердіти
+stride|strode|stridden|крокувати
+strike|struck|struck|вдаряти; страйкувати
+strive|strove|striven|прагнути
+swear|swore|sworn|присягати
+sweep|swept|swept|мести
+swell|swelled|swollen|набрякати
+swim|swam|swum|плавати
+swing|swung|swung|гойдатися
+take|took|taken|брати
+teach|taught|taught|навчати
+tear|tore|torn|рвати
+tell|told|told|розповідати
+think|thought|thought|думати
+throw|threw|thrown|кидати
+thrust|thrust|thrust|штовхати
+tread|trod|trodden|ступати
+undergo|underwent|undergone|зазнавати
+understand|understood|understood|розуміти
+undertake|undertook|undertaken|братися за
+undo|undid|undone|скасовувати
+unwind|unwound|unwound|розмотувати
+uphold|upheld|upheld|підтримувати
+upset|upset|upset|засмучувати
+wake|woke|woken|прокидатися
+wear|wore|worn|носити
+weave|wove|woven|ткати
+weep|wept|wept|плакати
+wet|wet|wet|мочити
+win|won|won|вигравати
+wind|wound|wound|заводити; витися
+withdraw|withdrew|withdrawn|знімати; виводити
+withhold|withheld|withheld|утримувати
+withstand|withstood|withstood|витримувати
+wring|wrung|wrung|викручувати
+write|wrote|written|писати

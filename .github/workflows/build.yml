@@ -1,0 +1,24 @@
+name: Build Windows exe + installer
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Build exe
+        run: cargo build --release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: irregular-verbs-exe
+          path: target/release/irregular-verbs.exe
+      - name: Install Inno Setup
+        run: choco install innosetup -y
+      - name: Build installer
+        run: iscc installer.iss
+      - uses: actions/upload-artifact@v4
+        with:
+          name: irregular-verbs-setup
+          path: installer_output/irregular-verbs-setup.exe

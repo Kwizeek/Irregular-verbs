@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Неправильні дієслова</title>
+<link rel="icon" href="assets/icon.png" type="image/png">
+<link rel="icon" href="assets/icon.ico" type="image/x-icon">
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --panel-bg: #16213e;
+    --text: #e0e0e0;
+    --text-weak: #888;
+    --accent: #7aa2ff;
+    --stripe: rgba(255,255,255,0.03);
+    --border: rgba(255,255,255,0.06);
+    --input-bg: #0f1a30;
+    --highlight-bg: #fff1a8;
+    --highlight-text: #000;
+    --btn-bg: #2a2a4a;
+    --btn-hover: #3a3a5a;
+    --header-border: rgba(255,255,255,0.08);
+    --shadow: rgba(0,0,0,0.3);
+  }
+
+  .light {
+    --bg: #f5f5f5;
+    --panel-bg: #ffffff;
+    --text: #1a1a1a;
+    --text-weak: #777;
+    --accent: #2f6fed;
+    --stripe: rgba(0,0,0,0.025);
+    --border: rgba(0,0,0,0.08);
+    --input-bg: #fff;
+    --highlight-bg: #fff1a8;
+    --highlight-text: #000;
+    --btn-bg: #e8e8e8;
+    --btn-hover: #d8d8d8;
+    --header-border: rgba(0,0,0,0.1);
+    --shadow: rgba(0,0,0,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .top-panel {
+    background: var(--panel-bg);
+    padding: 16px 24px 12px;
+    border-bottom: 1px solid var(--header-border);
+    box-shadow: 0 2px 8px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background 0.3s;
+  }
+
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  .header-row h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .theme-btn {
+    background: var(--btn-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 6px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .theme-btn:hover {
+    background: var(--btn-hover);
+  }
+
+  .counter {
+    color: var(--text-weak);
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 18px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--input-bg);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s, background 0.3s, color 0.3s;
+    margin-top: 4px;
+  }
+
+  .search-input::placeholder {
+    color: var(--text-weak);
+  }
+
+  .search-input:focus {
+    border-color: var(--accent);
+  }
+
+  .table-wrap {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 24px 24px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  thead th {
+    text-align: left;
+    color: var(--text-weak);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 14px 8px 8px;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    transition: background 0.3s;
+  }
+
+  tbody tr {
+    transition: background 0.15s;
+  }
+
+  tbody tr:nth-child(even) {
+    background: var(--stripe);
+  }
+
+  tbody tr:hover {
+    background: rgba(122, 162, 255, 0.08);
+  }
+
+  td {
+    padding: 8px 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    border-bottom: 1px solid var(--border);
+  }
+
+  td:first-child {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  td:last-child {
+    color: var(--text);
+  }
+
+  mark {
+    background: var(--highlight-bg);
+    color: var(--highlight-text);
+    padding: 1px 2px;
+    border-radius: 2px;
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--text-weak);
+    padding: 60px 20px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .top-panel { padding: 12px 12px 8px; }
+    .header-row h1 { font-size: 18px; }
+    .table-wrap { padding: 0 8px 16px; }
+    td { padding: 6px 4px; font-size: 14px; }
+    table { table-layout: auto; }
+    td:nth-child(4) { min-width: 100px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-panel">
+  <div class="header-row">
+    <h1>Неправильні дієслова</h1>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">Світла тема</button>
+  </div>
+  <div class="counter" id="counter">Показано 189 з 189 дієслів</div>
+  <input type="text" class="search-input" id="search" placeholder="Пошук: go, went, писати…" autofocus>
+</div>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Infinitive</th>
+        <th>Past Simple</th>
+        <th>Past Participle</th>
+        <th>Переклад</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <div class="empty-state" id="empty" style="display:none;">Нічого не знайдено</div>
+</div>
+
+<script>
+const VERBS_RAW = `arise|arose|arisen|виникати
+awake|awoke|awoken|прокидатися
+be|was/were|been|бути
+bear|bore|borne|нести; народжувати
+beat|beat|beaten|бити
+become|became|become|ставати
+begin|began|begun|починати
+bend|bent|bent|гнути
+bet|bet|bet|битися об заклад
+bid|bid|bid|пропонувати ціну
+bind|bound|bound|зв'язувати
+bite|bit|bitten|кусати
+bleed|bled|bled|стікати кров'ю
+blow|blew|blown|дути
+break|broke|broken|ламати
+breed|bred|bred|розводити
+bring|brought|brought|приносити
+broadcast|broadcast|broadcast|транслювати
+build|built|built|будувати
+burn|burnt/burned|burnt/burned|палити
+burst|burst|burst|лопатися
+buy|bought|bought|купувати
+cast|cast|cast|кидати; відливати
+catch|caught|caught|ловити
+choose|chose|chosen|вибирати
+cling|clung|clung|чіплятися
+come|came|come|приходити
+cost|cost|cost|коштувати
+creep|crept|crept|повзти
+cut|cut|cut|різати
+deal|dealt|dealt|мати справу
+dig|dug|dug|копати
+dive|dived/dove|dived|пірнати
+do|did|done|робити
+draw|drew|drawn|малювати
+dream|dreamt/dreamed|dreamt/dreamed|мріяти
+drink|drank|drunk|пити
+drive|drove|driven|водити (авто)
+dwell|dwelt|dwelt|мешкати
+eat|ate|eaten|їсти
+fall|fell|fallen|падати
+feed|fed|fed|годувати
+feel|felt|felt|відчувати
+fight|fought|fought|боротися
+find|found|found|знаходити
+fit|fit|fit|підходити за розміром
+flee|fled|fled|тікати
+fling|flung|flung|жбурляти
+fly|flew|flown|літати
+forbid|forbade|forbidden|забороняти
+forecast|forecast|forecast|прогнозувати
+foresee|foresaw|foreseen|передбачати
+foretell|foretold|foretold|передрікати
+forget|forgot|forgotten|забувати
+forgive|forgave|forgiven|пробачати
+forgo|forwent|forgone|відмовлятися
+freeze|froze|frozen|замерзати
+get|got|got/gotten|отримувати
+give|gave|given|давати
+go|went|gone|йти
+grind|ground|ground|молоти
+grow|grew|grown|рости
+hang|hung|hung|висіти
+have|had|had|мати
+hear|heard|heard|чути
+hide|hid|hidden|ховати
+hit|hit|hit|вдаряти
+hold|held|held|тримати
+hurt|hurt|hurt|завдавати болю
+keep|kept|kept|зберігати
+kneel|knelt|knelt|ставати на коліна
+know|knew|known|знати
+lay|laid|laid|класти
+lead|led|led|вести
+lean|leant/leaned|leant/leaned|спиратися
+leap|leapt/leaped|leapt/leaped|стрибати
+learn|learnt/learned|learnt/learned|вчити
+leave|left|left|залишати
+lend|lent|lent|позичати (комусь)
+let|let|let|дозволяти
+lie|lay|lain|лежати
+light|lit|lit|запалювати
+lose|lost|lost|губити
+make|made|made|робити
+mean|meant|meant|означати
+meet|met|met|зустрічати
+mislead|misled|misled|вводити в оману
+mistake|mistook|mistaken|помилятися
+misunderstand|misunderstood|misunderstood|неправильно розуміти
+mow|mowed|mown/mowed|косити
+outdo|outdid|outdone|перевершувати
+overcome|overcame|overcome|долати
+overdo|overdid|overdone|переборщувати
+overhear|overheard|overheard|підслухати
+override|overrode|overridden|скасовувати
+oversleep|overslept|overslept|проспати
+overtake|overtook|overtaken|обганяти
+partake|partook|partaken|брати участь
+pay|paid|paid|платити
+prove|proved|proven/proved|доводити
+put|put|put|класти
+quit|quit|quit|кидати
+read|read|read|читати
+rebuild|rebuilt|rebuilt|перебудовувати
+redo|redid|redone|переробляти
+repay|repaid|repaid|повертати борг
+retell|retold|retold|переказувати
+rewrite|rewrote|rewritten|переписувати
+rid|rid|rid|позбавляти
+ride|rode|ridden|їздити верхи
+ring|rang|rung|дзвонити
+rise|rose|risen|підніматися
+run|ran|run|бігти
+saw|sawed|sawn/sawed|пиляти
+say|said|said|казати
+see|saw|seen|бачити
+seek|sought|sought|шукати
+sell|sold|sold|продавати
+send|sent|sent|надсилати
+set|set|set|встановлювати
+sew|sewed|sewn/sewed|шити
+shake|shook|shaken|трусити
+shear|sheared|shorn|стригти
+shed|shed|shed|скидати; проливати
+shine|shone|shone|сяяти
+shoot|shot|shot|стріляти
+show|showed|shown|показувати
+shrink|shrank|shrunk|зменшуватися
+shut|shut|shut|зачиняти
+sing|sang|sung|співати
+sink|sank|sunk|тонути
+sit|sat|sat|сидіти
+slay|slew|slain|вбивати
+sleep|slept|slept|спати
+slide|slid|slid|ковзати
+slit|slit|slit|розрізати
+smell|smelt/smelled|smelt/smelled|пахнути
+sow|sowed|sown/sowed|сіяти
+speak|spoke|spoken|говорити
+speed|sped|sped|поспішати
+spell|spelt/spelled|spelt/spelled|вимовляти по буквах
+spend|spent|spent|витрачати
+spill|spilt/spilled|spilt/spilled|розливати
+spin|spun|spun|прясти; крутити
+spit|spat|spat|плювати
+split|split|split|розколювати
+spoil|spoilt/spoiled|spoilt/spoiled|псувати
+spread|spread|spread|поширювати
+spring|sprang|sprung|стрибати; виникати
+stand|stood|stood|стояти
+steal|stole|stolen|красти
+stick|stuck|stuck|приклеювати
+sting|stung|stung|жалити
+stink|stank|stunk|смердіти
+stride|strode|stridden|крокувати
+strike|struck|struck|вдаряти; страйкувати
+strive|strove|striven|прагнути
+swear|swore|sworn|присягати
+sweep|swept|swept|мести
+swell|swelled|swollen|набрякати
+swim|swam|swum|плавати
+swing|swung|swung|гойдатися
+take|took|taken|брати
+teach|taught|taught|навчати
+tear|tore|torn|рвати
+tell|told|told|розповідати
+think|thought|thought|думати
+throw|threw|thrown|кидати
+thrust|thrust|thrust|штовхати
+tread|trod|trodden|ступати
+undergo|underwent|undergone|зазнавати
+understand|understood|understood|розуміти
+undertake|undertook|undertaken|братися за
+undo|undid|undone|скасовувати
+unwind|unwound|unwound|розмотувати
+uphold|upheld|upheld|підтримувати
+upset|upset|upset|засмучувати
+wake|woke|woken|прокидатися
+wear|wore|worn|носити
+weave|wove|woven|ткати
+weep|wept|wept|плакати
+wet|wet|wet|мочити
+win|won|won|вигравати
+wind|wound|wound|заводити; витися
+withdraw|withdrew|withdrawn|знімати; виводити
+withhold|withheld|withheld|утримувати
+withstand|withstood|withstood|витримувати
+wring|wrung|wrung|викручувати
+write|wrote|written|писати`;
+
+const verbs = VERBS_RAW.trim().split('\n').map(line => {
+  const [inf, past, pp, ua] = line.split('|');
+  return { inf, past, pp, ua };
+});
+
+const tbody = document.getElementById('tbody');
+const searchInput = document.getElementById('search');
+const counterEl = document.getElementById('counter');
+const emptyEl = document.getElementById('empty');
+const themeBtnEl = document.getElementById('themeBtn');
+let isDark = true;
+
+function escapeHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function highlight(text, query) {
+  if (!query) return escapeHtml(text);
+  const lower = text.toLowerCase();
+  const idx = lower.indexOf(query);
+  if (idx === -1) return escapeHtml(text);
+  const before = escapeHtml(text.slice(0, idx));
+  const match = escapeHtml(text.slice(idx, idx + query.length));
+  const after = escapeHtml(text.slice(idx + query.length));
+  return `${before}<mark>${match}</mark>${after}`;
+}
+
+function render() {
+  const q = searchInput.value.trim().toLowerCase();
+  const filtered = verbs.filter(v =>
+    !q || [v.inf, v.past, v.pp, v.ua].some(c => c.toLowerCase().includes(q))
+  );
+
+  counterEl.textContent = `Показано ${filtered.length} з ${verbs.length} дієслів`;
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '';
+    emptyEl.style.display = '';
+    return;
+  }
+  emptyEl.style.display = 'none';
+
+  const html = filtered.map(v =>
+    `<tr><td>${highlight(v.inf, q)}</td><td>${highlight(v.past, q)}</td><td>${highlight(v.pp, q)}</td><td>${highlight(v.ua, q)}</td></tr>`
+  ).join('');
+  tbody.innerHTML = html;
+}
+
+function toggleTheme() {
+  isDark = !isDark;
+  document.body.classList.toggle('light', !isDark);
+  themeBtnEl.textContent = isDark ? 'Світла тема' : 'Темна тема';
+}
+
+searchInput.addEventListener('input', render);
+render();
+</script>
+
+</body>
+</html>
